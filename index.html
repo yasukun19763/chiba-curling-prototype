@@ -57,9 +57,22 @@ footer{margin-top:20px;border-top:5px solid var(--red)}.foot{max-width:var(--max
   object-fit:contain;
   object-position:center center;
 }
+/* メインバナーの高さ調整 */
+.hero,
+.slider,
+.slide {
+  height: auto;
+  aspect-ratio: 2048 / 760;
+}
+
+.banner-only .slide-bg {
+  object-fit: contain;
+}
+
 </style>
 </head>
-<body>
+
+ <body>
 <div class="lock" id="lock">
  <div class="lock-card"><div class="lock-mark"></div><h1>千葉県カーリング協会</h1><p>Webサイト リニューアル検討用</p>
  <form id="loginForm"><input id="password" type="password" inputmode="numeric" placeholder="パスワードを入力"><button type="submit">確認する</button><div class="error" id="error"></div></form>
