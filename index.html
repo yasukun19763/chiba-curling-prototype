@@ -22,23 +22,8 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:5px solid 
 .brand{margin-right:auto;line-height:1.1}.brand strong{font-size:24px}.brand span{display:block;margin-top:6px;font-size:12px;color:var(--muted)}
 nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700}.contact{background:var(--red);color:#fff;padding:12px 17px;border-radius:9px}
 .menu{display:none;border:0;background:none;font-size:29px}
-
-.hero{
-  position:relative;
-  width:calc(100% - 44px);
-  max-width:1136px;
-  margin:0 auto;
-  background:#14202c;
-  overflow:hidden;
-}
-
-.slides{
-  position:relative;
-  width:100%;
-  aspect-ratio:2048 / 760;
-}  
-  
-.slide{position:absolute;inset:0;opacity:0;transition:opacity .45s ease;pointer-events:none}.slide.active{opacity:1;pointer-events:auto}
+.hero{position:relative;width:calc(100% - 44px);max-width:1136px;margin:0 auto;background:#14202c;overflow:hidden}
+.slides{position:relative;width:100%;aspect-ratio:2048 / 760}.slide{position:absolute;inset:0;opacity:0;transition:opacity .45s ease;pointer-events:none}.slide.active{opacity:1;pointer-events:auto}
 .slide-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,17,27,.84),rgba(8,17,27,.58) 36%,rgba(8,17,27,.08) 74%)}
 .slide-content{position:relative;z-index:2;color:#fff;width:min(585px,72%);padding:58px}.badge{display:inline-block;background:var(--red);padding:7px 12px;border-radius:6px;font-size:13px;font-weight:800}
@@ -58,19 +43,16 @@ section{padding:30px 0}.section-title{display:flex;align-items:end;justify-conte
 .venue-img{height:145px;background:linear-gradient(135deg,#dce8ee,#9eb8c7);display:grid;place-items:center;color:#526571;font-weight:800;text-align:center}.venue:nth-child(2) .venue-img{background:linear-gradient(135deg,#e8edf0,#b8c7ce)}.venue:nth-child(3) .venue-img{background:linear-gradient(135deg,#ebe6dc,#b8aa87)}
 .venue-body{padding:16px}.venue h3{font-size:18px;margin:0 0 7px}.venue p{font-size:13px;color:var(--muted);line-height:1.55;margin:0 0 13px}.outline{display:inline-block;border:1.5px solid var(--red);color:var(--red);padding:8px 14px;border-radius:999px;font-weight:800;font-size:13px}
 footer{margin-top:20px;border-top:5px solid var(--red)}.foot{max-width:var(--max);margin:auto;padding:24px 22px 30px;display:flex;justify-content:space-between;gap:30px;align-items:center}.foot strong{color:var(--red);font-size:19px}.foot small{color:var(--muted)}.foot-links{display:flex;gap:18px;font-size:13px;color:#505862}
-
-  
 @media(max-width:900px){
+ .hero{width:calc(100% - 28px);max-width:none}
  .head{height:68px;padding:0 15px}.brand strong{font-size:19px}.brand span{font-size:11px}nav{display:none}.menu{display:block}
  .slide::after{background:linear-gradient(0deg,rgba(8,17,27,.90),rgba(8,17,27,.35) 72%)}.slide-content{position:absolute;bottom:0;width:100%;padding:24px 24px 39px}.slide h2{font-size:28px}.accent{font-size:18px}.slide p{font-size:13px}
  .wrap{padding:14px 14px 0}.quick{grid-template-columns:1fr;gap:10px}.qcard{display:grid;grid-template-columns:120px 1fr}.qvisual{height:auto;min-height:112px}.qbody h3{font-size:17px}
  .news-row{grid-template-columns:82px 72px 1fr 14px;gap:6px;font-size:12px}.news-row b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.venues{grid-template-columns:1fr}.venue{display:grid;grid-template-columns:120px 1fr}.venue-img{height:auto;min-height:135px;font-size:12px}.foot{display:block;padding:20px 15px}.foot-links{margin-top:16px;flex-wrap:wrap}
-.hero{
-  width:calc(100% - 28px);
-  max-width:none;
 }
-}
+ .banner-only::after{display:none!important}
 
+.banner-only .slide-bg{object-fit:contain!important;object-position:center center}
 
 </style>
 </head>
@@ -88,11 +70,9 @@ footer{margin-top:20px;border-top:5px solid var(--red)}.foot{max-width:var(--max
 </div></header>
 <main>
 <div class="hero" id="hero"><div class="slides">
-
 <article class="slide active banner-only">
-  <img src="banner_kanto_senior.png" alt="関東シニアカーリング選手権 優勝・準優勝">
+  <img class="slide-bg" src="banner_kanto_senior.png" alt="関東シニアカーリング選手権 優勝・準優勝">
 </article>
-  
  <article class="slide placeholder-bg alt"><div class="slide-content"><span class="badge">はじめての方へ</span><h2>千葉でカーリングを<br>はじめよう</h2><div class="accent">氷の上の楽しさを、もっと身近に。</div><p>初心者講習会・練習会など、初めての方への情報はこちら。</p><a class="btn" href="#beginner">詳しく見る →</a></div></article>
  <article class="slide placeholder-bg"><div class="slide-content"><span class="badge">公式戦</span><h2>大会 予定・結果</h2><div class="accent">千葉県選手権・関東大会など</div><p>公式戦の予定や大会結果をまとめてご案内します。</p><a class="btn" href="#competition">詳しく見る →</a></div></article>
  <article class="slide placeholder-bg warm"><div class="slide-content"><span class="badge">オープン大会</span><h2>千葉オープン</h2><div class="accent">参加募集・大会結果</div><p>千葉オープンなど、オープン大会の最新情報はこちら。</p><a class="btn" href="#competition">詳しく見る →</a></div></article>
