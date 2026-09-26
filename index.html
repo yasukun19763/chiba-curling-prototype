@@ -23,7 +23,7 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:5px solid 
 nav{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700}.contact{background:var(--red);color:#fff;padding:12px 17px;border-radius:9px}
 .menu{display:none;border:0;background:none;font-size:29px}
 .hero{position:relative;max-width:var(--max);margin:0 auto;background:#14202c;overflow:hidden}
-.slides{position:relative;height:475px}.slide{position:absolute;inset:0;opacity:0;transition:opacity .45s ease;pointer-events:none}.slide.active{opacity:1;pointer-events:auto}
+.slides{position:relative;height:420px}.slide{position:absolute;inset:0;opacity:0;transition:opacity .45s ease;pointer-events:none}.slide.active{opacity:1;pointer-events:auto}
 .slide-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,17,27,.84),rgba(8,17,27,.58) 36%,rgba(8,17,27,.08) 74%)}
 .slide-content{position:relative;z-index:2;color:#fff;width:min(585px,72%);padding:58px}.badge{display:inline-block;background:var(--red);padding:7px 12px;border-radius:6px;font-size:13px;font-weight:800}
@@ -58,12 +58,8 @@ footer{margin-top:20px;border-top:5px solid var(--red)}.foot{max-width:var(--max
   object-position:center center;
 }
 /* メインバナーの高さ調整 */
-.hero,
-.slider,
-.slide {
-  height: auto;
-  aspect-ratio: 2048 / 1100;
-   max-height: 520px;
+.slides {
+  height: 420px;
 }
 
 .banner-only .slide-bg {
